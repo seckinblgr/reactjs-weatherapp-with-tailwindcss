@@ -61,7 +61,7 @@ function TempAndDetails() {
                 <UilTemperature size={18} className="mr-1" />
                 Real Fell :
                 <span className="font-medium ml-1">
-                  {Math.floor(currentWeather.main.feels_like)} °C
+                  {Math.floor(currentWeather.main.feels_like)}°C
                 </span>
               </div>
 
@@ -77,12 +77,12 @@ function TempAndDetails() {
                 <UilWind size={18} className="mr-1" />
                 Wind :
                 <span className="font-medium ml-1">
-                  {currentWeather.wind.speed.toFixed(1)} km/h
+                  {currentWeather.wind.speed.toFixed(1)}km/h
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center  space-x-2 text-white text-sm py-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center  space-y-2 space-x-2 text-white text-sm py-3">
             <UilSun />
             <p className="font-light flex ">
               Rise:
@@ -91,16 +91,16 @@ function TempAndDetails() {
                 {formatedSunrise().sunriseMinutes} AM
               </span>
             </p>
-            <p className="font-light">|</p>
+            <p className="font-light hidden  sm:block ">|</p>
 
             <UilSunset />
-            <p className="font-light">
+            <p className="font-light ">
               Set:
               <span className="font-medium ml-2 tracking-wider">
                 {formatedSunset().sunsetHours}:{formatedSunset().sunsetHours} PM
               </span>
             </p>
-            <p className="font-light">|</p>
+            <p className="font-light hidden  sm:block">|</p>
 
             <UilArrowUp />
             <p className="font-light">
@@ -109,7 +109,7 @@ function TempAndDetails() {
                 {Math.floor(currentWeather.main.temp_max)}°C
               </span>
             </p>
-            <p className="font-light">|</p>
+            <p className="font-light hidden  sm:block">|</p>
 
             <UilArrowDown />
             <p className="font-light">
